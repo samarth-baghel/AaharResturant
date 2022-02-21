@@ -1,0 +1,17 @@
+<h3>Menu</h3>
+<div class="container">
+    <div class="card" style="width: 18rem;" *ngFor="let details of foodData">
+        <img src="{{details.src}}" class="card-img-top" height="286" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{details.name}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{details.price | currency :'INR'}}</li>
+            <li class="list-group-item">Ratings {{details.star}}</li>
+            <li class="list-group-item">Cuisine {{details.cusion}}</li>
+        </ul>
+        <div class="card-body">
+            <a routerLink="curd" class="btn btn-primary" (click)="addtocart(details.src)">Add to chart</a>
+        </div>
+    </div>
+</div>

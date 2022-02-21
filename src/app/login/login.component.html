@@ -1,0 +1,29 @@
+<ng-template appPlaceholder></ng-template>
+<div class="" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Login with G-mail</h5>
+                
+                <button type="button" class="btn btn-primary" routerLink="signUp">Sign UP</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">E-mail:</label>
+                        <input type="email" class="form-control" id="recipient-name" name="email" [(ngModel)]="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Password:</label>
+                        <input type="password" name="" class="form-control" id="message-text" name="password" [(ngModel)]="password" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary" routerLink="forgotPassword">Forgot PassWord</a>
+                <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+

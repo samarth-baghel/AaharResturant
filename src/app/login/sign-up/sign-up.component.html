@@ -1,0 +1,41 @@
+<div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="signUp">
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">E-mail:</label>
+                        <input type="email" class="form-control" id="recipient-name"  formControlName="emailAddr">
+                        <!-- <div *ngIf="signUp.get('emailAddr').touched && signUp.get('emailAddr').hasError('required') && signUp.get('emailAddr')hasError('email')">Enter a valid email</div> -->
+                        <span *ngIf="signUp.get('emailAddr')?.touched && signUp.get('emailAddr')?.hasError('required') && signUp.get('emailAddr')?.hasError('email')">Enter a email address</span>
+                        <span *ngIf="signUp.get('emailAddr')?.touched &&  signUp.get('emailAddr')?.hasError('email')">use @ in email address</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Create Password:</label>
+                        <input type="password" name="" class="form-control" id="message-text" formControlName="create">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Confirm Password:</label>
+                        <input type="password" name="" class="form-control" id="message-text" formControlName="confirm">
+                        <span *ngIf="signUp.get('confirm')?.touched && signUp.value.create!==signUp.value.confirm">please enter a confirm password</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Date of birth:</label>
+                        <input type="date" class="form-control" id="recipient-name" formControlName="dob">
+                    </div>
+
+
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-primary" (click)="sign()">Sign Up</button>
+                    </div>
+                </form>
+     
+            </div>
+        </div>
+    </div>
+</div>
