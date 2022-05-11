@@ -14,13 +14,13 @@
       </div>
       <ul class="navbar-list">
           <li class="list-item">
-              <a routerLink="foodDetail" class="active">Food Item</a>
+              <a routerLink="foodDetail" tabindex="1" (focus)="navgate('foodDetail')" class="active">Food Item</a>
           </li>
           <li class="list-item">
-              <a routerLink="logIn">Login/Sign up</a>
+              <a routerLink="logIn" tabindex="2" (focus)="navgate('logIn')">Login/Sign up</a>
           </li>
           <li class="list-item">
-              <a routerLink="cart"><i class="fas fa-shopping-cart fa-2x"></i></a>
+              <a routerLink="cart" tabindex="3" (focus)="navgate('cart')"><i class="fas fa-shopping-cart fa-2x"></i></a>
           </li>
       </ul>
   </span>

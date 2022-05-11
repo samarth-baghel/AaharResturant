@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
-
-  constructor() { }
+  // context:string="“Hello to You! You will find food, harmony, and laughter here.”";
+  constructor() { 
+    
+  }
 
   ngOnInit(): void {
   }
+  
 
 }
